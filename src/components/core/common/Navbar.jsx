@@ -111,7 +111,7 @@ function Navbar(props){
 
          <div className='flex items-center gap-x-4'>
             {
-                user && user?.accountType != "Instructor" && (
+                user && user?.accountType !== "Instructor" && (
                     <Link to="/dashboard/cart" className='relative'>
                           <AiOutlineShoppingCart fontSize={24} className='
                            text-richblack-25'/>

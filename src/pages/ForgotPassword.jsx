@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { IoMdPricetag } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";

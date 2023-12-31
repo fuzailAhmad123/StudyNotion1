@@ -3,7 +3,7 @@ import { toast } from "react-hot-toast";
 import {AiOutlineEye,AiOutlineEyeInvisible} from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {setSignupData, setSigupData} from "../../../slices/authSlice"
+import {setSignupData} from "../../../slices/authSlice"
 import { sentOtp } from "../../../services/operations/authAPI";
 
 const SignupForm = ({setIsLoggedIn}) => {
@@ -24,7 +24,6 @@ const SignupForm = ({setIsLoggedIn}) => {
   const [showPasswordOne,setShowPasswordOne] = useState(false);
   const [showPasswordTwo,setShowPasswordTwo] = useState(false);
 
-  const {firstName , lastName , email , password , confirmPassword} = formData;
   
   function changeHandler(event) {
     setFormData((prevData) => ({
@@ -39,7 +38,7 @@ const SignupForm = ({setIsLoggedIn}) => {
   function handleOnSubmit(event){
     event.preventDefault();
 
-    if(formData.password != formData.confirmPassword){
+    if(formData.password !== formData.confirmPassword){
         toast.error("Password don't match")
         return;
     }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import CTAButton from '../HomePage/CTAButton';
 import "../../../App.css"
 import {apiConnector} from "../../../services/apiconnector"
 import {contactusEndpoint} from "../../../services/apis"
